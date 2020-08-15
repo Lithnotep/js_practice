@@ -41,15 +41,24 @@ const oldest = inventors.sort(function(a, b){
   const nextguy = b.passed - b.year;
   return lastguy > nextguy ? -1 : 1;
 })
+
 console.table(oldest);
 
-// const sortPeople = people.sort(function(first, last){
-//   console.log(last)
-// })
-
-const alpha = people.sort((lastOne, nextOne) => {
+const sortPeople = people.sort((lastOne, nextOne) => {
       const [aLast, aFirst] = lastOne.split(', ');
       const [bLast, bFirst] = nextOne.split(', ');
       return aLast > bLast ? 1 : -1;
     });
-    console.log(alpha);
+console.log(sortPeople);
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+const car_data = data.reduce(function(obj, item) {
+      if (!obj[item]) {
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {});
+
+console.log(car_data)
