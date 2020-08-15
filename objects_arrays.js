@@ -20,3 +20,15 @@ const person = {
 
 const cap2 = Object.assign({}, person, { number: 99, age: 12 });
 console.log(cap2);
+
+const wes = {
+      name: 'Wes',
+      age: 100,
+      social: {
+        twitter: '@wesbos',
+        facebook: 'wesbos.developer'
+      }
+    };
+
+console.clear();
+console.log(wes);
