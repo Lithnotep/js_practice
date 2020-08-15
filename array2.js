@@ -12,5 +12,8 @@ const comments = [
       { text: 'Nice Nice Nice!', id: 542328 }
     ];
 
-const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
-console.log({isAdult});
+const isOneAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+console.log({isOneAdult});
+
+const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+   console.log({allAdults});
