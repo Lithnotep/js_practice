@@ -16,4 +16,14 @@ const isOneAdult = people.some(person => ((new Date()).getFullYear()) - person.y
 console.log({isOneAdult});
 
 const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
-   console.log({allAdults});
+console.log({allAdults});
+
+const comment = comments.find(comment => comment.id === 823423);
+console.log(comment);
+
+const index = comments.findIndex(comment => comment.id === 823423);
+const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ];
+console.log(newComments);
